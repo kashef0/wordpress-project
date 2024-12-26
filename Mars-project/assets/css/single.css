@@ -1,0 +1,131 @@
+.single-post-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid brown;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.single-post-header {
+    border-bottom: 2px solid brown;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.single-post-title {
+    font-size: 2.5rem;
+    color: brown;
+    margin: 0;
+    text-align: center;
+}
+
+.single-post-meta {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+
+.post-category a {
+    color: brown;
+}
+.single-post-meta span {
+    font-style: italic;
+}
+
+.single-post-thumbnail {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.single-post-thumbnail img {
+    max-height: 50vh;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.single-post-content {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #fafafa;
+    margin: 20px 0;
+}
+
+.content.comments {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid brown;
+}
+
+input#submit {
+    padding: .5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input#submit:hover {
+    background-color: rgba(165, 42, 42, 0.742);
+    color: whitesmoke;
+}
+
+textarea#comment {
+    background-color: whitesmoke;
+}
+
+.content.comments a { 
+    color: brown;
+}
+
+label:after {
+    content: "\a";
+    white-space: pre;
+}
+
+
+.single-post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid brown;
+}
+
+.single-post-navigation a {
+    text-decoration: none;
+    color: brown;
+    font-weight: bold;
+}
+
+.single-post-navigation a:hover, .content.comments a:hover {
+    text-decoration: underline;
+    color: rgba(165, 42, 42, 0.711);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .single-post-container {
+        padding: 15px;
+    }
+
+    .single-post-title {
+        font-size: 2rem;
+    }
+
+    .single-post-meta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .single-post-navigation {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

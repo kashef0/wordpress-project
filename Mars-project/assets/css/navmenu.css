@@ -1,0 +1,321 @@
+/* Navbar Container */
+.navbar {
+    position: sticky; /* Keeps it fixed at the top while scrolling */
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Glass effect */
+    backdrop-filter: blur(10px); /* Blurs the background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.background-video {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    z-index: -1; 
+    filter: brightness(0.5);
+    animation: zoomOutEffect 4s ease-out forwards;
+    overflow: hidden;
+}
+
+@keyframes zoomOutEffect {
+    0% {
+        transform: scale(2); 
+        filter: brightness(0);
+    }
+    100% {
+        transform: scale(1); 
+        filter: brightness(.7);
+    }
+}
+.background-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+}
+
+.rubrik {
+    color: #ee0a0a; 
+    margin-left: calc(5% + 5vw); 
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Flexbox Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+    max-height: 50px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Links */
+.nav-links .menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Link container */
+.nav-links .menu li {
+    margin: 0 15px;
+    position: relative; /* Needed for pseudo-elements positioning */
+}
+
+/* Link styling */
+.nav-links .menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    position: relative; /* Allow pseudo-elements to be positioned relative to the link */
+    padding: 10px 20px; /* Add padding for spacing */
+    display: inline-block; /* Make it block-level for consistent animation */
+    border: 2px solid transparent; /* Invisible border to prevent layout shifts */
+    transition: color 0.3s ease;
+}
+
+/* Border container for animation */
+.nav-links .menu li a::before {
+    content: ''; /* Create the border */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 8px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in border calculation */
+    z-index: -1; /* Place the border behind the text */
+    visibility: hidden; /* Initially hidden */
+    transform: scale(1); /* Reset scale for smooth animation */
+    animation: none; /* Start idle */
+}
+
+/* Hover Effect - Trigger animations */
+.nav-links .menu li a:hover::before {
+    visibility: visible; /* Make the border visible */
+    animation: draw-border-fast 0.3s ease forwards; /* Fast animation */
+}
+
+@keyframes draw-border-fast {
+    0% {
+        border-color: transparent;
+    }
+    5% {
+        border-color: brown transparent transparent transparent; /* Top-left corner */
+    }
+    10% {
+        border-color: brown brown transparent transparent; /* Top edge */
+    }
+    15% {
+        border-color: brown brown transparent transparent; /* Continuing top edge */
+    }
+    20% {
+        border-color: brown brown transparent transparent; /* More progress along top edge */
+    }
+    25% {
+        border-color: brown brown transparent transparent; /* Top complete */
+    }
+    30% {
+        border-color: brown brown brown transparent; /* Starting right edge */
+    }
+    35% {
+        border-color: brown brown brown transparent; /* Right edge */
+    }
+    40% {
+        border-color: brown brown brown transparent; /* Continuing right edge */
+    }
+    45% {
+        border-color: brown brown brown transparent; /* More progress along right edge */
+    }
+    50% {
+        border-color: brown brown brown transparent; /* Right complete */
+    }
+    55% {
+        border-color: brown brown brown brown; /* Starting bottom edge */
+    }
+    60% {
+        border-color: brown brown brown brown; /* Continuing bottom edge */
+    }
+    65% {
+        border-color: brown brown brown brown; /* More progress along bottom edge */
+    }
+    70% {
+        border-color: brown brown brown brown; /* Bottom complete */
+    }
+    75% {
+        border-color: brown brown brown brown; /* Starting left edge */
+    }
+    80% {
+        border-color: brown brown brown brown; /* Continuing left edge */
+    }
+    85% {
+        border-color: brown brown brown brown; /* More progress along left edge */
+    }
+    90% {
+        border-color: brown brown brown brown; /* Almost complete */
+    }
+    95% {
+        border-color: brown brown brown brown; /* Almost complete */
+    }
+    100% {
+        border-color: rgba(165, 42, 42, 0.85); /* Complete */
+    }
+}
+
+/* Hover effect to change the text color */
+.nav-links .menu li a:hover {
+    color: brown  ; /* Change the link color on hover */
+}
+
+.nav-links .menu li .actived {
+    border: 2px solid brown;
+    border-radius: 8px;
+    color: brown;
+    z-index: -1;
+    
+}
+
+/* Search Bar */
+.search-bar .search-form {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar input[type="search"] {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search-bar input[type="search"]:focus {
+    outline: none;
+    border-color: brown;
+}
+/* border-color: #007BFF; */
+.button {
+    text-decoration: none;
+    border: none;
+    background: none;
+    position: absolute;
+    font-size: 16px;
+    cursor: pointer;
+    color: brown;
+    padding-left: .5rem;
+}
+
+.button:hover {
+    color: rgba(165, 42, 42, 0.828);
+}
+
+/* Hidden Search Bar for Small Devices */
+.search-bar-mobile {
+    display: none;
+    background: rgba(0, 0, 0, 0.085);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar-mobile .search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar-mobile input[type="search"] {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search-bar-mobile button {
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: brown;
+    padding: 0 10px;
+}
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none; /* Hide links on small screens */
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.5s ease; /* Smooth transition */
+        transform: translateX(-100%) !important;
+        z-index: 1000;
+    }
+    .nav-links .menu li a {
+        color: rgb(68, 67, 67);
+    }
+
+    .nav-links.active {
+        transform: translateX(0) !important;
+        
+    }
+
+    .nav-links.active, .menu {
+        display: flex; 
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links.active .menu li {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .search-bar {
+        display: none; /* Hide desktop search bar */
+    }
+
+    .search-bar-mobile {
+        display: block; /* Show mobile search bar */
+    }
+}

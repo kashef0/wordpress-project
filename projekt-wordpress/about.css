@@ -1,0 +1,23 @@
+body {
+    background: radial-gradient(circle at 50% 50%, #000000, #050505, #0a0a0a);
+    position: relative;
+  }
+
+  .star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    animation: twinkle 2s infinite alternate;
+  }
+
+  @keyframes twinkle {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.3;
+    }
+  }
+

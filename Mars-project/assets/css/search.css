@@ -1,0 +1,120 @@
+/* Search Results */
+.search-results-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-results-header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.search-results-header h1 span {
+    color: brown;
+    font-weight: bold;
+}
+
+.search-results-grid {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Search Result Card */
+.search-result-card {
+    width: 48%;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #000000;
+}
+
+.search-result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.search-result-thumbnail {
+    height: 180px;
+    overflow: hidden;
+}
+
+.search-result-thumbnail img,
+.search-result-video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.search-result-content {
+    padding: 15px;
+}
+
+.search-result-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: brown;
+}
+
+.search-result-title a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.search-result-title a:hover {
+    color: brown;
+}
+
+.search-result-excerpt {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.search-result-read-more {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: brown;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.search-result-read-more:hover {
+    background-color: rgba(165, 42, 42, 0.764);
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 8px 15px;
+    color: #0073aa;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a:hover,
+.pagination span.current {
+    background-color: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}

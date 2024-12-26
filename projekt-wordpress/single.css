@@ -1,0 +1,23 @@
+
+.card {
+    width: 80%;
+    padding: 4rem 0;
+    
+}
+
+.card-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.card-text {
+    width: 100%;
+}
+
+.card-image {
+    width: 100%;
+    justify-content: flex-start;
+}
+
+

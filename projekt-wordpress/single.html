@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./service.css" />
+    <link rel="stylesheet" href="./about.css" />
+    <link rel="stylesheet" href="./single.css" />
+    <script src="./index.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="background-video">
+        <video autoplay loop muted playsinline class="banner-video">
+            <source src="./background-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+   <!-- HTML Code -->
+   <header class="navbar banner">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="#">
+                <img src="./logo.png" alt="Logo" />
+            </a>
+        </div>
+
+        <!-- Hamburger Menu for Small Devices -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <ul class="menu">
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="./service.html">blog</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <form action="#" method="get">
+                <input id="search" type="search" placeholder="Search..." />
+                <label for="search" class="search-label"><i class="fas fa-search"></i></label>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hidden Search Bar for Small Devices -->
+    <div class="search-bar-mobile">
+        <form action="#" method="get">
+            <input id="serach" type="search" placeholder="Search..." />
+            <label for="serach" class="search-label"><i class="fas fa-search"></i></label>
+        </form>
+    </div>
+</header>
+    <div class="rubrik">
+      <h1>Välkomna till our Odyssey</h1>
+    </div>
+<main >
+    <div class="main-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-text">
+                    <h2 class="rubrik1">Resor till Mars</h2>
+                    <ul class="service-list">
+                        <li class="list">
+                          Utforska Mars-landskap och delta i koloniseringsprojekt.
+                        </li>
+                        <li class="list">
+                            Bemannade resor till Mars för äventyrare, forskare och entreprenörer.
+                        </li>
+                        <li class="list">
+                            Långtidsvistelseprogram för de som vill bidra till Mars-kolonisering.
+                        </li>
+                    </ul>
+                    <a href="" class="button">Läs mer.....</a>
+                </div>
+                <div class="card-image">
+                    <img src="./one.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    
+
+    <!-- Footer Section -->
+    <footer class="footer-dark">
+        <div class="container-footer">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Snabba Länkar</h3>
+                    <ul>
+                        <li><a href="#">Hem</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Om</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>Space Odyssey</h3>
+                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                </div>
+            </div>
+            <p class="copyright">2024 Space Odyssey. All rights reserved.</p>
+        </div>
+    </footer>
+  
+  </body>
+
+</html>

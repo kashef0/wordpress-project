@@ -1,0 +1,147 @@
+
+.felx-dec {
+    flex-direction: column;
+}
+
+
+main {
+    flex-direction: row;
+}
+
+.flex-column {
+    padding: 0;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+.card-content-service {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #000000;
+    color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-content-service:hover {
+    transform: scale(1.02); /* Slight scaling on hover */
+  }
+
+/* Reverse layout for odd cards */
+.card-content-service.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+/* Optional: Style for even cards (if necessary) */
+.card-content-service:not(.reverse-layout) {
+    flex-direction: row;
+}
+.card:nth-child(1) .card-text {
+    order: 2; 
+}
+
+
+.card-text {
+    padding: .5rem;
+    color: white;
+}
+
+.card-text p {
+    padding: .5rem;
+}
+
+.card-text .rubrik1 {
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
+
+}
+
+.color {
+    background-color: brown;
+}
+
+
+.content-rubrik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-image {
+    width: auto;
+    justify-content: flex-start;
+}
+
+.card-image img {
+    border-radius: 5px;
+}
+
+.card-content-service {
+    position: relative;
+    justify-content: center;
+    background-color: #000;
+    margin-bottom: 4rem;
+    z-index: 150;
+}
+
+/* styling for "service-list */
+
+.service-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 .5rem 0;
+}
+
+.list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    padding-left: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.list::before {
+    content: '•'; /* Use a custom bullet (or any symbol) */
+    position: absolute;
+    left: 0; /* Position it to the left of the text */
+    color: brown; /* Bullet color */
+    font-size: 1.2rem; /* Adjust size if needed */
+  }
+
+
+/* Container for the breaking news */
+.breaking-news-container {
+    position: relative;
+    width: 100%; /* Full width */
+    background-color: #000 !important; /* Black background */
+    color: #fff; /* White text */
+    overflow: hidden; /* Hide overflowing text */
+    z-index: 100; /* Ensure it stays on top */
+    padding: 10px 0; /* Padding for better visibility */
+  }
+  
+  /* Scrolling text */
+  .breaking-news {
+    display: inline-block; /* Make it inline so it can scroll */
+    white-space: nowrap; 
+    padding-left: 25%;
+    animation: scrollLeftToRight 15s linear infinite; /* Animation */
+  }
+  
+  /* Keyframes for scrolling animation */
+  @keyframes scrollLeftToRight {
+    0% {
+      transform: translateX(-100%); /* Start off the screen to the left */
+    }
+    100% {
+      transform: translateX(100%); /* Move off the screen to the right */
+    }
+  }
+

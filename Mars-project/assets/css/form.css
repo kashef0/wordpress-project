@@ -1,0 +1,94 @@
+/* General form styling */
+.custom-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: radial-gradient(circle at 50% 50%, #00000069, #0505055b, #0a0a0a50);
+    padding: 0 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-form .form-label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.custom-form input[type="text"],
+.custom-form input[type="email"],
+.custom-form textarea {
+    padding: 12px 15px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #130d0d99;
+    transition: border-color 0.3s ease;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color: #a5a2a2; /* Light gray color */
+    font-style: italic; /* Optional: italic style for placeholder */
+}
+
+/* Change placeholder text color on focus */
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: #828080; /* Slightly darker color on focus */
+}
+ 
+/* Focus effect */
+.custom-form input[type="text"]:focus,
+.custom-form input[type="email"]:focus,
+.custom-form textarea:focus {
+    outline: none;
+    color: #fff;
+    border-color: brown;
+    box-shadow: 0 0 5px rgba(255, 0, 98, 0.3);
+}
+
+/* Textarea styling */
+.custom-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit button styling */
+.custom-form input[type="submit"] {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: brown;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Submit button hover effect */
+.custom-form input[type="submit"]:hover {
+    background-color: rgba(165, 42, 42, 0.606);
+    box-shadow: 0 4px 10px rgba(255, 0, 81, 0.3);
+}
+
+/* Form responsiveness */
+@media (max-width: 768px) {
+    .custom-form {
+        padding: 15px;
+    }
+
+    .custom-form .form-label {
+        font-size: 14px;
+    }
+
+    .custom-form input[type="submit"] {
+        font-size: 14px;
+    }
+}

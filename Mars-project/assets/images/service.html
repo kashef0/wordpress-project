@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="background-video">
+        <video autoplay loop muted playsinline class="banner-video">
+            <source src="./background-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+   <!-- HTML Code -->
+   <header class="navbar banner">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="#">
+                <img src="./logo.png" alt="Logo" />
+            </a>
+        </div>
+
+        <!-- Hamburger Menu for Small Devices -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a class="active" href="#">blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <form action="#" method="get">
+                <input id="search" type="search" placeholder="Search..." />
+                <label for="search" class="search-label"><i class="fas fa-search"></i></label>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hidden Search Bar for Small Devices -->
+    <div class="search-bar-mobile">
+        <form action="#" method="get">
+            <input id="serach" type="search" placeholder="Search..." />
+            <label for="serach" class="search-label"><i class="fas fa-search"></i></label>
+        </form>
+    </div>
+</header>
+<div class="rubrik">
+  <h1>Hello to our travel</h1>
+</div>
+    <main>
+        <div class="main-container">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h2 class="rubrik1">Card Title</h2>
+                        <p>This is some text inside the card. It can be a description or any other content you want to display.</p>
+                    </div>
+                    <div class="card-image">
+                        <video src="./170153-842720359_tiny.mp4" autoplay loop muted playsinline></video>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-image">
+                        <video src="./143014-781982524_medium.mp4" autoplay loop muted playsinline></video>
+                    </div>
+                    <div class="card-text">
+                        <h2 class="rubrik1">Card Title</h2>
+                        <p>This is another card with some more text and information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Logo Section -->
+      <div class="footer-logo">
+        <img src="./logo.png" alt="Mars Travel Logo" />
+        <p>Explore Mars with us. Your journey begins here.</p>
+      </div>
+      <!-- Social Media Section -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul class="social-media-footer">
+          <li><a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter Section -->
+      <div class="footer-newsletter">
+        <h3>Stay Updated</h3>
+        <p>Sign up for our newsletter to receive the latest Mars travel updates.</p>
+        <form action="#" method="POST">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 Space Odyssey. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  </body>
+
+</html>

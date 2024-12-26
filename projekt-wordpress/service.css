@@ -1,0 +1,100 @@
+
+.felx-dec {
+    flex-direction: row;
+}
+
+
+main {
+    flex-direction: row;
+}
+
+.card {
+    padding: 0;
+}
+
+.card:nth-child(1) .card-text {
+    order: 1; 
+}
+
+.card-text {
+    padding: .5rem;
+}
+
+.card-text, h2 , p {
+    padding: .5rem;
+}
+
+.card-text h2 {
+    padding: 1rem;
+    background-color: brown;
+    border-radius: 5px;
+
+}
+
+
+.content-rubrik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-image img {
+    border-radius: 5px;
+}
+
+.card-content {
+    justify-content: center;
+}
+
+/* styling for "service-list */
+
+.service-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0;
+}
+
+.list {
+    position: relative;
+    padding: .5rem;
+    padding-left: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.list::before {
+    content: '•'; /* Use a custom bullet (or any symbol) */
+    position: absolute;
+    left: 0; /* Position it to the left of the text */
+    color: brown; /* Bullet color */
+    font-size: 1.2rem; /* Adjust size if needed */
+  }
+
+
+/* Container for the breaking news */
+.breaking-news-container {
+
+    width: 100%; /* Full width */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    overflow: hidden; /* Hide overflowing text */
+    z-index: 1000; /* Ensure it stays on top */
+    padding: 10px 0; /* Padding for better visibility */
+  }
+  
+  /* Scrolling text */
+  .breaking-news {
+    display: inline-block; /* Make it inline so it can scroll */
+    white-space: nowrap; 
+    padding-left: 25%;
+    animation: scrollLeftToRight 15s linear infinite; /* Animation */
+  }
+  
+  /* Keyframes for scrolling animation */
+  @keyframes scrollLeftToRight {
+    0% {
+      transform: translateX(-100%); /* Start off the screen to the left */
+    }
+    100% {
+      transform: translateX(100%); /* Move off the screen to the right */
+    }
+  }
+
