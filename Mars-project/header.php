@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/form.css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/single.css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/search.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/content-service.css" />
     <title><?php bloginfo('name'); ?> | <?php the_title(); ?></title>
     <?php wp_head(); ?>
   </head>

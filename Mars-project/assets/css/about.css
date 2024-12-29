@@ -22,3 +22,144 @@ body {
       opacity: 0.1;
     }
   }
+
+
+
+/* About Section Styling */
+.about-company-container {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 60px 0;
+}
+
+/* About Section */
+.company-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.85); /* Darker background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center the about content */
+  color: #fff; /* White text */
+}
+
+.company-introduction {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff; /* White title for contrast */
+  margin-bottom: .5em;
+}
+
+.about-content {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #bdc3c7; /* Light gray content for readability */
+  margin-top: 20px;
+  padding: .5em;
+  transition: all .4s;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 50, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5); /* Frosty glow */
+  transform: scale(.9);
+}
+
+.about-content:hover {
+  transform: scale(1);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.817);
+}
+
+/* Team Section Styling */
+.team-section {
+  background-color: rgba(0, 0, 0, 0.9); /* Black background */
+  padding: 50px 0;
+  text-align: center;
+  color: #fff; /* White text */
+}
+
+.section-title {
+  font-size: 2.5em;
+  color: #fff; /* White text for section title */
+  margin-bottom: 40px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Space between team member cards */
+}
+
+.team-member {
+  max-width: 300px;
+  width: 100%; /* Full width on small screens */
+  background-color: #222; /* Dark background for team cards */
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.601);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px); /* Hover effect for team card */
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.817);
+}
+
+.team-photo {
+  margin-bottom: 20px;
+}
+
+.team-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.team-info {
+  color: #fff; /* White text for team info */
+}
+
+.team-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.team-position {
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.team-bio {
+  font-size: 1em;
+  color: #bdc3c7; /* Light gray bio text */
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-member {
+      width: 100%; /* Full width on smaller screens */
+  }
+
+  .company-section {
+      padding: 20px;
+  }
+
+  .about-title {
+      font-size: 2em;
+  }
+
+  .about-content {
+      font-size: 1em;
+  }
+}

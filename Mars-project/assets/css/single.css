@@ -57,7 +57,7 @@
 
 .content.comments {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     color: whitesmoke;
     margin-top: 40px;
     padding-top: 20px;

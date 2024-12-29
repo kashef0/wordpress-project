@@ -26,7 +26,7 @@ function my_widget_area() {
             'before_widget' => '<div id="%1$s" class="widget header-area %2$s">'
         ],
         [
-            'name' => __('main widget area', 'textdomain'),
+            'name' => __('breaking news widget area', 'textdomain'),
             'id' => 'content-widget-area',
             'description' => __('Lägga till widget här för att visa i body'),
             'before_widget' => '<div id="%1$s" class="widget main-content-area %2$s">'
@@ -82,8 +82,20 @@ function custom_trim_content($content) {
 
     // Check if content has more than 40 words
     if (str_word_count(strip_tags($content)) > $word_limit) {
-        // Append the "read more" link
-        $trimmed_content .= ' <a class="search-result-read-more" href="' . get_permalink() . '">Läs mer...</a>';
+        $pages_slugs = ['service', 'services', 'tjänst', 'tänster', 'product', 'produkter', 'produkt', 'products', 'tjanster', 'tjanst', 'tjansten', 'tjansterna'];
+        $is_service = false;
+        foreach ($pages_slugs as $slug) {
+        if (has_term($slug, 'category')) {
+            $is_service = true;
+            break;
+            }
+        }
+        if (!$is_service) {
+            // Append the "read more" link
+            $trimmed_content .= ' <a class="search-result-read-more" href="' . get_permalink() . '">Läs mer...</a>';
+        } else {
+            $trimmed_content .= ' <a class="search-result-read-more" href="' . get_permalink() . '">Läs mer&boka tjänst</a>';
+        }
     }
 
     // Return the modified content
@@ -92,3 +104,5 @@ function custom_trim_content($content) {
 
 // Hook our custom function to the 'the_content' filter
 add_filter('the_content', 'custom_trim_content');
+
+

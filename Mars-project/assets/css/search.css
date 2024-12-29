@@ -18,8 +18,6 @@
 }
 
 .search-results-grid {
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
     display: flex;
     gap: 20px;
     flex-wrap: wrap;

@@ -115,33 +115,54 @@ main {
     font-size: 1.2rem; /* Adjust size if needed */
   }
 
-
 /* Container for the breaking news */
 .breaking-news-container {
-    position: relative;
+    max-width: 1450px;
     width: 100%; /* Full width */
     background-color: #000 !important; /* Black background */
     color: #fff; /* White text */
     overflow: hidden; /* Hide overflowing text */
-    z-index: 100; /* Ensure it stays on top */
-    padding: 10px 0; /* Padding for better visibility */
-  }
-  
-  /* Scrolling text */
-  .breaking-news {
-    display: inline-block; /* Make it inline so it can scroll */
+    z-index: 151; /* Ensure it stays on top */
+}
+
+/* Wrapper for the scrolling news items */
+.breaking-news-wrapper {
+    display: flex; /* Use flexbox to align the items horizontally */
+    animation: scrollLeftToRight 17s linear infinite; /* Animation for continuous scrolling */
+}
+
+
+/* Individual breaking news item */
+.breaking-news {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
     white-space: nowrap; 
     padding-left: 25%;
-    animation: scrollLeftToRight 15s linear infinite; /* Animation */
-  }
-  
-  /* Keyframes for scrolling animation */
-  @keyframes scrollLeftToRight {
+}
+
+
+.breaking-news .news-link {
+    text-decoration: none;
+    color: white;
+}
+
+.breaking-news .news-link:hover {
+    color: rgba(245, 245, 245, 0.868);
+}
+
+.breaking-news-rubrik {
+    color: brown;
+    padding-right: .25rem;
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scrollLeftToRight {
     0% {
-      transform: translateX(-100%); /* Start off the screen to the left */
+        transform: translateX(-100%); /* Start off the screen to the right */
     }
     100% {
-      transform: translateX(100%); /* Move off the screen to the right */
+        transform: translateX(100%); /* Move off the screen to the left */
     }
-  }
-
+}

@@ -266,41 +266,37 @@ main {
   
 
 
+/* Center content when no media is present */
+.card-content.no-media {
+  align-items: center;
+  justify-content: center;
+}
 
-/* Responsive Design */
 
-/* 
-@media (max-width: 1024px) {
-    .card {
-        width: 45%; 
-    }
-} */
-
-/* For screens smaller than 768px (tablets/large phones) */
 @media (max-width: 768px) {
     .card {
-        flex-direction: column; /* Stack the text and image vertically */
+        flex-direction: column; 
     }
-        /* Reverse the layout of every odd card */
+
     .main-container .card:nth-child(odd) .card-content {
       flex-direction: column;
     }
 
-    /* Default layout for even cards (or the first card) */
+
     .main-container .card:nth-child(even) .card-content {
       flex-direction: column;
     }
 
 
     .card-text {
-        width: 100%; /* Text takes full width */
-        padding-right: 0; /* Remove padding for mobile */
+        width: 100%; 
+        padding-right: 0;
         text-align: center;
     }
 
     .card-image {
       display: block;
-        width: 100%; /* Image takes full width */
+        width: 100%; 
     }
     .card-image img {
       width: calc(60% + 25vw);
@@ -308,5 +304,9 @@ main {
     .card-content {
       display: flex;
       flex-direction: column;
+    }
+
+    .footer-dark {
+      padding: .7rem;
     }
 }
