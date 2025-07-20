@@ -45,7 +45,7 @@
         </div>
 
         <!-- Hamburger Menu for Small Devices -->
-        <div class="hamburger-menu" onclick="toggleMenu()">
+        <div class="hamburger-menu" id="menu-toggle" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>

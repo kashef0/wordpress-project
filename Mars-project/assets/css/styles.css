@@ -89,10 +89,10 @@ main {
 }
 
 .img {
+  width: 100%;
+  height: auto;
   max-width: 600px;
   max-height: 40vh;
-  width: calc(20rem + 15vw);
-  height: auto;
 }
 
 /* Read More Button Styling */
