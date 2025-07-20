@@ -106,3 +106,76 @@ function custom_trim_content($content) {
 add_filter('the_content', 'custom_trim_content');
 
 
+function add_instruction_message() {
+    // visa popup meddelandet endast om användaren är inloggad
+    if (is_user_logged_in()) {
+        ?>
+        <div id="instruction-message" class="instruction-popup hidden">
+            <div class="popup-content">
+                <h2>Instruktioner för att använda webbplatsen</h2>
+                <p><strong>det här instruktionen kommer att <mark> visas bara en gång</mark>, så var snäll och läs den noggrant.</strong></p>
+                <hr>
+                <ol>
+                    
+                    <li><strong>skapa en ny sida och kategorisera poster</strong>
+                        <ul>
+                            <li><strong>skapa en ny sida:</strong> gå till sidor > lägg till ny i wp-admin, fyll i namn och publicera</li>
+                            <li><strong>skapa en kategori:</strong> gå till inlägg > kategorier, skapa en kategori med samma namn som sidan</li>
+                            <li><strong>koppla poster till kategori:</strong> välj kategorin när du skapar inlägg så visas de på rätt sida</li>
+                        </ul>
+                    </li>
+                    <li><strong>lägga till sidans rubrik med taggar</strong>
+                        <ul>
+                            <li><strong>gå till sidan:</strong> redigera den valda sidan</li>
+                            <li><strong>lägg till rubrik i taggfältet:</strong> skriv in rubriken som tagg (t.ex. "breaking news")</li>
+                            <li><strong>uppdatera sidan:</strong> rubriken hämtas från första taggen</li>
+                        </ul>
+                    </li>
+                    <li><strong>lägg till ny breaking news</strong>
+                        <ul>
+                            <li><strong>skapa nytt inlägg:</strong> gå till inlägg > lägg till nytt</li>
+                            <li><strong>välj kategori:</strong> använd <code>breaking-news</code> som kategori</li>
+                            <li><strong>publicera:</strong> inlägget visas automatiskt som breaking news</li>
+                        </ul>
+                    </li>
+                </ol>
+                <button id="close-popup">stäng</button>
+            </div>
+        </div>
+        <?php
+    } 
+}
+add_action('wp_footer', 'add_instruction_message');
+
+// laddar css och js för popup-funktionen
+function add_content() {
+    wp_enqueue_style('popup-style', get_template_directory_uri() . '/assets/css/pop-message.css');
+    wp_enqueue_script('popup-script', get_template_directory_uri() . '/assets/js/index.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'add_content');
+
+// översätter vissa kommentar-relaterade texter till svenska
+function custom_translate_comment_texts( $translated_text, $text, $domain ) {
+    if ($translated_text === 'Reply') {
+        return 'Svara';
+    }
+
+    if ($translated_text === '(Edit)') {
+        return 'Redigera';
+    }
+
+    if (strpos($translated_text, 'at') !== false) {
+        return str_replace('at', 'kl', $translated_text);
+    }
+
+    if ($translated_text === 'Your comment is awaiting moderation.') {
+        return 'Din kommentar väntar på granskning.';
+    }
+
+    if (strpos($translated_text, 'says:') !== false) {
+        return str_replace('says:', 'säger:', $translated_text);
+    }
+
+    return $translated_text;
+}
+add_filter( 'gettext', 'custom_translate_comment_texts', 20, 3 );
